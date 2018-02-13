@@ -1,0 +1,24 @@
+{
+  "name": "beag",
+  "description": "🐶",
+  "version": "0.1.0",
+  "dependencies": {
+    "discord.js": "^11.3.0",
+    "lodash": "^4.17.5",
+    "moment": "^2.20.1",
+    "typescript": "^2.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.5",
+    "onchange": "^3.3.0",
+    "tslint": "^5.9.1",
+    "tslint-config-airbnb": "^5.6.0"
+  },
+  "scripts": {
+    "dev": "onchange 'src/**/*.ts' -- npm run change",
+    "change": "npm run lint && npm run build && npm run start",
+    "lint": "tslint -p tsconfig.json -c tslint.json 'src/**/*.ts'",
+    "build": "tsc",
+    "start": "node ./dist"
+  }
+}
